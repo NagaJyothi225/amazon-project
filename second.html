@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Sample Amazon Webpage</title>
+<style>
+  .headpart{
+  background-color: rgb(0, 0, 0);
+  border: 1px solid black;
+  width: 100%;
+  height: 50px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  .search{
+    width: 70%;
+  }
+  #logo{
+    width: 30px;
+    height: 30px;
+  }
+  #input{
+    width: 100%;
+    height: 25px;
+  }
+  .secondpart{
+    background-color: rgba(0, 0, 0, 0.418);
+    border: 1px solid black;
+    width: 100%;
+    height: 30px;
+   display:flex;
+   justify-content: space-around ;
+   align-items: center;
+}
+h5:hover{
+border: 1px solid rgb(255, 145, 0);
+border-radius: 5%;
+}
+#profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+ .mobile{
+  z-index: -1;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+ #mobile_pic1{
+     width: 300px;
+    height: 350px; 
+    margin-top: 7%; 
+}
+#mobile_pic2{
+  width: 300px;
+  height: 350px;
+  margin-top: 5%;
+}
+#mobile_pic3{
+  width: 300px;
+  height: 390px;
+ 
+  }
+  .fot{
+    font-size: medium;
+    font-weight: bolder;
+    margin-left: 20px;
+   
+  transition: all;
+  
+ }
+ .fot:hover{
+        color: rgb(227, 174, 248);
+         transform: rotate(-20deg);
+       
+ }
+ .Dress{
+  display: flex;
+  justify-content: space-around;
+ }
+ .flip-card {
+   
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+.flip-card-inner {
+  position:fixed;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+ 
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 438px;
+  backface-visibility: hidden;
+ 
+}
+.flip-card-front img{
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 0% 100%) ;
+    /* opacity: 0.4; */
+    width: 100%;
+    height: 438px;
+}
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back button{
+    height: 50px;
+    width: 50%;
+    border-radius: 30px;
+}
+.flip-card-back h1{
+    font-size: 50px;
+    font-weight: lighter;
+}
+.flip-card-back h5{
+    font-size: 25px;
+    font-weight: lighter;
+}
+.fp-1{
+    background: linear-gradient(to bottom,rgb(26, 202, 26),rgb(224, 220, 219));
+  color: white;
+  transform: rotateY(180deg);
+}
+.fp-2{
+    background: linear-gradient(to bottom,orange,orangered);
+  color: white;
+  transform: rotateY(180deg);
+}
+.fp-3{
+    background: linear-gradient(to bottom,blue, skyblue);
+  color: white;
+  transform: rotateY(180deg);
+}
+.footer {
+  margin-top: 184px; 
+  background-color: rgb(128, 128, 128);
+  text-align: center;
+}
+
+  </style>  
+</head>
+
+<body>
+    <div>
+       <div class="headpart">
+             <img id="logo" src="./images/amazon--600.png"/>
+            <div class="search">
+                <input id="input" placeholder="search amazon.in"/>
+            </div>
+             <img id="profile" src="./images/pngtree-cute-anime-girl-wearing-flowers-picture-image_2735301.png"/>
+        </div>
+        <div class="secondpart">
+            <h5>Dress</h5> 
+            <h5>Mobiles</h5> 
+            <h5>Offers</h5> 
+
+        </div>
+    </div>
+    <div class="mobile">
+        <div>
+          <img id="mobile_pic1" src="./images/51OoXhWRbCL._SX300_SY300_QL70_FMwebp_.webp"/>
+          <div>M.R.P: ₹36,999</div>
+        </div>
+        <div >
+          <img id="mobile_pic2" src="./images/mobile2.webp"/>
+          <div>M.R.P: ₹16,499</div>
+        </div>
+        <div>
+          <img id="mobile_pic3" src="./images/mobile3_.jpg"/>
+           <div>M.R.P: ₹19,999</div>
+        </div>
+    </div>
+    <div class="Dress">
+      <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+          <img src="./images/1dress.jpg" alt="Drees">
+            </div>
+            <div class="flip-card-back fp-1">
+              <h5>Only </h5>
+              <h1>$ 799</h1>
+              <button>Order Now</button>
+            </div>
+          </div>
+         </div>
+      <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+             <img src="./images/top1.webp" alt="Top">
+            </div>
+            <div class="flip-card-back fp-2">
+              <h5>Only </h5>
+              <h1>$ 699</h1>
+              <button>Order  Now</button>
+            </div>
+          </div>
+        </div>
+      <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img  src="./images/sarees1.webp"/>
+            </div>
+            <div class="flip-card-back fp-3">
+              <h5>Only </h5>
+              <h1>$ 899</h1>
+              <button>Order Now</button>
+            </div>
+           
+          </div>
+        </div>
+    </div>
+    <footer class="footer">
+      <img style="text-align:center; background-color:rgba(128, 128, 128, 0.562); margin-left: 40%;" src="./img copy/logo-green-1x.png" alt="">
+      <div style="display: flex;">
+          <p class="fot">Email</p>
+          <p class="fot">contact </p>
+          <p class="fot">Rating</p>
+          <p class="fot">Views</p>        
+      </div>
+  </footer>
+</body>
+</html>
